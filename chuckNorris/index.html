@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chucky Jokes!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Chuck Norris Jokes</h1>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-8 col-10 mb-4">
+                <img id="chuckImg" class="img-fluid rounded-circle mx-auto d-block" src="./Chuck-norris.png" alt="Chuck Norris image">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8 col-10 mb-4">
+                <button type="button" class="btn btn-primary btn-block" id="randomButton">Get Random Joke</button>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Categories</h4>
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="animalJoke" class="btn btn-secondary btn-block">Random Animal
+                                    Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="celebrityJoke" class="btn btn-success btn-block">Random
+                                    Celebrity Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="religiousJoke" class="btn btn-danger btn-block">Random
+                                    Religious Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="explicitJoke" class="btn btn-warning btn-block">Random
+                                    Explicit Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="scienceJoke" class="btn btn-info btn-block">Random Science
+                                    Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="sportJoke" class="btn btn-light btn-block">Random Sport
+                                    Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="devJoke" class="btn btn-dark btn-block">Random Dev
+                                    Joke</button>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <button type="button" id="movieJoke" class="btn btn-success btn-block">Random Movie
+                                    Joke</button>
+                            </div>
+                                <div class="col-md-4 mb-2">
+                                <button type="button" id="historyJoke" class="btn btn-secondary btn-block">Random History
+                                    Joke</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="h4 text-center" id="printJoke"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./chucky.js"></script>
+</body>
+
+</html>

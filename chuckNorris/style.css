@@ -1,0 +1,33 @@
+body{
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+#chuckImg{
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+#printJoke{
+    margin-top: 5%;
+    text-align: center;
+}
+.sideButtons{
+    width: 40%;
+    display: flex;
+    float: right;
+}
+
+.rotate {
+    animation: spin 1s linear forwards;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
