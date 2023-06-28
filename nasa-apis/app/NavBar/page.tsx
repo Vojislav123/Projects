@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link href="/">
-              <img className="w-20" src={nasaLogo.src} alt="NASA Logo" />
+              <Image width={20} height={20} className="w-20" src={nasaLogo.src} alt="NASA Logo" />
             </Link>
             <div className="md:hidden">
               <button

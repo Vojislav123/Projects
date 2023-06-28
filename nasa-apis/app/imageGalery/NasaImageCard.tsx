@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import nasaLogo from '@/service/nasaLogo.png';
 import ImagePopup from '@/service/imagePopup';
+import Image from 'next/image';
 
 interface NasaImage {
   data: {
@@ -34,7 +35,7 @@ const NasaImageCard: React.FC<{ image: NasaImage }> = ({ image }) => {
   if (loading) {
     return (
       <div className="justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        <img src={nasaLogo.src} alt="NASA Placeholder" />
+        <Image width={100} height={100} src={nasaLogo.src} alt="NASA Placeholder" />
         <p>Loading...</p>
       </div>
     );

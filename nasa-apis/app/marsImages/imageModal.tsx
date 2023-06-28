@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface RoverPhoto {
@@ -28,7 +29,7 @@ const ImageModal: React.FC<ImagePopupProps> = ({ photo, onClose }) => {
         >
           X
         </button>
-        <img src={photo.img_src} alt={`Mars Rover - ${photo.rover.name}`} className="w-60%" />
+        <Image src={photo.img_src} width={1024} height={800} alt={`Mars Rover - ${photo.rover.name}`} className="w-60%" />
         <div className="mt-4 text-center">
           <h3 className="text-lg font-bold mb-2">{photo.rover.name}</h3>
           <p className="text-gray-400 m-2">{photo.camera.full_name}</p>

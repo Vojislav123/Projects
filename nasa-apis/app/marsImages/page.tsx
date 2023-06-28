@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import { apiKey } from '@/service/apikey';
 import ImageModal from './imageModal';
+import Image from 'next/image';
+import { error } from 'console';
 
 interface RoverPhoto {
   id: number;
@@ -33,9 +35,7 @@ const MarsRoverPhotos = () => {
     perseverance: 832,
   };
 
-  useEffect(() => {
-    fetchRoverPhotos();
-  }, []);
+
 
   const fetchRoverPhotos = async () => {
     const rovers = ['curiosity', 'opportunity', 'spirit', 'perseverance'];
@@ -56,6 +56,10 @@ const MarsRoverPhotos = () => {
       console.error('Error fetching Mars rover photos:', error);
     }
   };
+
+  useEffect(() => {
+    fetchRoverPhotos();
+  }, []);
 
   const handleLoadMore = () => {
     fetchRoverPhotos();
@@ -78,8 +82,9 @@ const MarsRoverPhotos = () => {
           <div key={roverPhoto.id} className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 p-4">
             <h3 className="text-lg font-bold mb-2 text-center">{roverPhoto.rover.name}</h3>
             <p className="text-gray-400 m-2">{roverPhoto.camera.full_name}</p>
-            <img
+            <Image
               src={roverPhoto.img_src}
+              width={200} height={200}
               alt={`Mars Rover - ${roverPhoto.rover.name}`}
               className="w-full rounded-lg cursor-pointer"
               onClick={() => openImagePopup(roverPhoto)}
